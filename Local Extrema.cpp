@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/problemset/problem/888/A
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -12,24 +12,25 @@ using namespace std;
 ll gcd(ll a,ll b);
 ll max_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
+bool element_checker_in_array(char cha);
 
 void fun()
 {
-    int n,sum=0,t;
+    int n,counter=0;
     sf n;
+    int arr[n];
     for(int i=0; i<n; i++)
     {
-        sf t;
-        if(t==0)
+        sf arr[i];
+    }
+    for(int i=1; i<n-1; i++)
+    {
+        if((arr[i]<arr[i-1] && arr[i]<arr[i+1]) || ((arr[i]>arr[i-1] && arr[i]>arr[i+1])))
         {
-            sum+=1;
-        }
-        else
-        {
-            sum+=t;
+            counter++;
         }
     }
-    pf sum;
+    pf counter;
     nl
 }
 int main()
@@ -38,7 +39,7 @@ int main()
     cin.tie(0);
 
     int t=1;
-    sf t;
+    //sf t;
     while(t>0)
     {
         fun();
@@ -80,4 +81,16 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[])
         }
     }
     return t;
+}
+bool element_checker_in_array(char cha)
+{
+    char arra[]={'a','e','i','o','u','y'};
+    if(find(arra,arra+6,cha) != arra+6)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }

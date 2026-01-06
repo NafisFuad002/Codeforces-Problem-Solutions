@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/contest/2131/problem/A
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -15,21 +15,25 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 
 void fun()
 {
-    int n,sum=0,t;
+    int n,sum=0;
     sf n;
+    int arr1[n],arr2[n];
     for(int i=0; i<n; i++)
     {
-        sf t;
-        if(t==0)
+        sf arr1[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        sf arr2[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        if(arr1[i]>arr2[i])
         {
-            sum+=1;
-        }
-        else
-        {
-            sum+=t;
+            sum+=arr1[i]-arr2[i];
         }
     }
-    pf sum;
+    pf sum+1;
     nl
 }
 int main()

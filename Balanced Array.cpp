@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/problemset/problem/1343/B
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -15,22 +15,32 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 
 void fun()
 {
-    int n,sum=0,t;
+    ll n,sum1=0,sum2=0;
     sf n;
-    for(int i=0; i<n; i++)
+    if((n/2)%2==1 || n==2)
     {
-        sf t;
-        if(t==0)
-        {
-            sum+=1;
-        }
-        else
-        {
-            sum+=t;
-        }
+        pn
     }
-    pf sum;
-    nl
+    else
+    {
+        py
+        ll c=1;
+        for(ll i=2; c<=n/2; i+=2)
+        {
+            pf i<<" ";
+            sum1+=i;
+            c++;
+        }
+        c=1;
+        for(ll i=1; c<=(n/2)-1; i+=2)
+        {
+            pf i<<" ";
+            sum2+=i;
+            c++;
+        }
+        pf sum1-sum2;
+        nl
+    }
 }
 int main()
 {

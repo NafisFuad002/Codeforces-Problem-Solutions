@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/contest/2117/problem/A
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -6,6 +6,7 @@ using namespace std;
 #define pf cout<<
 #define sf cin>>
 #define ll long long
+#define py pf "YES"; nl
 #define py pf "YES"; nl
 #define pn pf "NO"; nl
 
@@ -15,22 +16,35 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 
 void fun()
 {
-    int n,sum=0,t;
-    sf n;
-    for(int i=0; i<n; i++)
+    int n,x,s=-1,e=-1,t;
+    sf n>>x;
+    for(int i=1; i<=n; i++)
     {
         sf t;
-        if(t==0)
+        if(t==1)
         {
-            sum+=1;
-        }
-        else
-        {
-            sum+=t;
+            if(s==-1)
+            {
+                s=i;
+            }
+            else
+            {
+                e=i;
+            }
         }
     }
-    pf sum;
-    nl
+    if(s==-1 || e==-1)
+    {
+        py
+    }
+    else if(e-s+1<=x)
+    {
+        py
+    }
+    else
+    {
+        pn
+    }
 }
 int main()
 {

@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/problemset/problem/938/A
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -13,23 +13,35 @@ ll gcd(ll a,ll b);
 ll max_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 
+bool checker(char c)
+{
+    char arr[]={'a','e','i','o','u','y'};
+    if(find(arr,arr+6,c) != arr+6)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 void fun()
 {
-    int n,sum=0,t;
-    sf n;
-    for(int i=0; i<n; i++)
+    int n;
+    string s;
+    sf n>>s;
+    for(int i=0; i<s.length(); i++)
     {
-        sf t;
-        if(t==0)
+        if(checker(s[i]) == true && checker(s[i-1]) == true)
         {
-            sum+=1;
+            continue;
         }
         else
         {
-            sum+=t;
+            pf s[i];
         }
     }
-    pf sum;
     nl
 }
 int main()
@@ -38,7 +50,7 @@ int main()
     cin.tie(0);
 
     int t=1;
-    sf t;
+    //sf t;
     while(t>0)
     {
         fun();

@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/contest/2123/problem/B
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -6,8 +6,8 @@ using namespace std;
 #define pf cout<<
 #define sf cin>>
 #define ll long long
-#define py pf "YES"; nl
-#define pn pf "NO"; nl
+#define py pf "Yes"; nl
+#define pn pf "No"; nl
 
 ll gcd(ll a,ll b);
 ll max_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
@@ -15,22 +15,30 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 
 void fun()
 {
-    int n,sum=0,t;
-    sf n;
+    ll n,j,k;
+    sf n>>j>>k;
+    ll arr[n];
     for(int i=0; i<n; i++)
     {
-        sf t;
-        if(t==0)
+        sf arr[i];
+    }
+    j=arr[j-1];
+    sort(arr,arr+n);
+    if(k>1)
+    {
+        py
+    }
+    else
+    {
+        if(j<arr[n-1])
         {
-            sum+=1;
+            pn
         }
         else
         {
-            sum+=t;
+            py
         }
     }
-    pf sum;
-    nl
 }
 int main()
 {

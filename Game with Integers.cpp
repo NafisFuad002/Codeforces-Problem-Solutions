@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/problemset/problem/1899/A
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -15,21 +15,16 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 
 void fun()
 {
-    int n,sum=0,t;
+    int n;
     sf n;
-    for(int i=0; i<n; i++)
+    if((n-1)%3==0 || (n+1)%3==0)
     {
-        sf t;
-        if(t==0)
-        {
-            sum+=1;
-        }
-        else
-        {
-            sum+=t;
-        }
+        pf "First";
     }
-    pf sum;
+    else
+    {
+        pf "Second";
+    }
     nl
 }
 int main()

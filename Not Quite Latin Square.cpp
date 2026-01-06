@@ -1,4 +1,4 @@
-//https://codeforces.com/contest/2130/problem/A
+//https://codeforces.com/problemset/problem/1915/B
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -8,28 +8,35 @@ using namespace std;
 #define ll long long
 #define py pf "YES"; nl
 #define pn pf "NO"; nl
+#define arrin for(int i=0; i<n; i++){sf arr[i];}
+#define arr2in for(int i=0; i<n; i++){sf arr2[i];}
+
 
 ll gcd(ll a,ll b);
 ll max_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
 ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[]);
+bool element_checker_in_array(char cha);
+
 
 void fun()
 {
-    int n,sum=0,t;
-    sf n;
-    for(int i=0; i<n; i++)
+    int ascii,res=0,sum=0;
+    char c;
+    for(int i=0; i<3; i++)
     {
-        sf t;
-        if(t==0)
+        sum=0;
+        for(int i=0; i<3; i++)
         {
-            sum+=1;
+            sf c;
+            ascii=c;
+            if(c!='?')
+            {
+                sum+=ascii;
+            }
         }
-        else
-        {
-            sum+=t;
-        }
+        res=max(res,198-sum);
     }
-    pf sum;
+    pf (char)res;
     nl
 }
 int main()
@@ -47,6 +54,7 @@ int main()
 
     return 0;
 }
+
 ll gcd(ll a,ll b)
 {
     while(b!=0)
@@ -80,4 +88,16 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[])
         }
     }
     return t;
+}
+bool element_checker_in_array(char cha)
+{
+    char arra[]= {'a','e','i','o','u','y'};
+    if(find(arra,arra+6,cha) != arra+6)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
