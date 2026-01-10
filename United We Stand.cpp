@@ -1,5 +1,5 @@
 /*
-https://codeforces.com/problemset/problem/1921/A
+https://codeforces.com/problemset/problem/1859/A
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -22,12 +22,37 @@ bool element_checker_in_array(char cha);
 
 void fun()
 {
-    int a1,a2,b1,b2,c1,c2,d1,d2;
-    sf a1>>a2>>b1>>b2>>c1>>c2>>d1>>d2;
-    int res1= (a1-b1)*(a1-b1) + (a2-b2)*(a2-b2);
-    int res2= (a1-c1)*(a1-c1) + (a2-c2)*(a2-c2);
-    int res=min(res1,res2);//bahu<korno
-    pf res; nl
+    ll n;
+    sf n;
+    ll arr[n];
+    arrin
+    sort(arr,arr+n);
+    ll c=count(arr,arr+n,arr[n-1]);
+    if(c==n)
+    {
+        pf "-1";
+    }
+    else
+    {
+        pf n-c<<" "<<c;
+        nl
+        for(ll i=0; i<n; i++)
+        {
+            if(arr[i]!=arr[n-1])
+            {
+                pf arr[i]<<" ";
+            }
+        }
+        nl
+        for(ll i=0; i<n; i++)
+        {
+            if(arr[i]==arr[n-1])
+            {
+                pf arr[i]<<" ";
+            }
+        }
+    }
+    nl
 }
 int main()
 {
@@ -81,7 +106,7 @@ ll min_value_in_arr(ll st_ind, ll en_ind, ll arr[])
 }
 bool element_checker_in_array(char cha)
 {
-    char arra[]={'a','e','i','o','u','y'};
+    char arra[]= {'a','e','i','o','u','y'};
     if(find(arra,arra+6,cha) != arra+6)
     {
         return true;

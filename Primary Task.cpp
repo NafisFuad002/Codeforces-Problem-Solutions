@@ -1,5 +1,5 @@
 /*
-https://codeforces.com/problemset/problem/1921/A
+https://codeforces.com/problemset/problem/2000/A
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -22,12 +22,20 @@ bool element_checker_in_array(char cha);
 
 void fun()
 {
-    int a1,a2,b1,b2,c1,c2,d1,d2;
-    sf a1>>a2>>b1>>b2>>c1>>c2>>d1>>d2;
-    int res1= (a1-b1)*(a1-b1) + (a2-b2)*(a2-b2);
-    int res2= (a1-c1)*(a1-c1) + (a2-c2)*(a2-c2);
-    int res=min(res1,res2);//bahu<korno
-    pf res; nl
+    string s;
+    sf s;
+    if(s.length()==3 && s[0]=='1' && s[1]=='0' && s[2]!='1' && s[2]!='0')
+    {
+        py
+    }
+    else if(s[0]=='1' && s[1]=='0' && s[2]!='0' && s.length()>3)
+    {
+        py
+    }
+    else
+    {
+        pn
+    }
 }
 int main()
 {
